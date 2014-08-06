@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
 
 
-
-  resources :logins
+  #resources :suborders
+  
   
   resources :products
   

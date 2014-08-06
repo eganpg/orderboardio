@@ -4,5 +4,6 @@ class Suborder
   field :email, type: String
   
   belongs_to :mainorderboard
+  has_many :products
 	 
 end

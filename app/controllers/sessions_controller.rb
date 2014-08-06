@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 			if @maidorderboard != nil
 				redirect_to login_mainorderboard_path(@current_login.id, @mainorderboard.id)
 			else
-				redirect_to new_login_mainorderboard_path(@current_login)
+				redirect_to login_path(@current_login.id)
 			end
 		else
 

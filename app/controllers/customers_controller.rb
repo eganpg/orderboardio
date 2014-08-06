@@ -7,6 +7,7 @@ class CustomersController < ApplicationController
 		def new
 			@customer = Customer.new
 			@customer = Customer.where(:customer_id => @customer.id)
+			@customer = current_user.customer
 
 		end
 

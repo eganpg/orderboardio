@@ -1,5 +1,5 @@
-<h1>Check it out</h1>
-<%= form_for [@login, @mainorderboard] do |l| %>
+<h1>What day is this orderboard for</h1>
+<%= form_for [@current_user, @mainorderboard] do |l| %>
 	<%= l.text_field :name %>
   
 	Add: <%= l.submit "Add" %>

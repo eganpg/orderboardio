@@ -1,9 +1,7 @@
-<% @suborder.each do |l| %>
-	<p><%= l.vendorname %>
+<h1>List the Vendors Here</h1>
+	<p><%= @suborder.vendorname %></p>
+
+
+          	<%= link_to ' do work on this', mainorderboard_suborders_path(@mainorderboard.id)%>
+        
 	
-	<%= l.email %>
-	
-	
-	
-</p>
-	<% end %>

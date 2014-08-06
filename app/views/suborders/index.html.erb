@@ -1,9 +1,14 @@
-<% @suborder.each do |l| %>
-	<p><%= l.vendorname %>
-	
-	<%= l.email %>
-	
-	
-	
-</p>
-	<% end %>
+<h1>This is where the suborder index will be</h1>
+
+
+<ul>
+        	<% @suborder.each do |l| %>
+          
+          <li><b><%= l.vendorname %>
+          	<%= link_to ' do work on this', mainorderboard_suborders_path(@current_user.id)%></li>
+        
+          <% end %>
+        </ul>
+        <%= link_to 'Add a Vendor', new_mainorderboard_suborder_path(@current_user.id) %>
+
+

@@ -1,12 +1,13 @@
  class MainorderboardsController < ApplicationController
 	def index
-		
-		@mainorderboard = Mainorderboard.all
+		@login = Login.find(params[:login_id])
+		@mainorderboards = current_user.mainorderboards
 	end
 
 	def show
-		@mainorderboard = Mainorderboard.find(params[:id])
+		
 		@login = Login.find(params[:login_id])
+		@mainorderboards = current_user.mainorderboards
 	end
 
 	
@@ -17,12 +18,12 @@
 	end
 
 	def create
-		@login = Login.find(params[:login_id])
-		@mainorderboard = Mainorderboard.new(
+		
+		@mainorderboards = current_user.mainorderboards.new(
 			params.require(:mainorderboard).permit(:name)
 			)
-		if @mainorderboard.save
-			redirect_to login_mainorderboard_path(@login.id, @mainorderboard.id)
+		if @mainorderboards.save
+			redirect_to login_mainorderboards_path(@current_user.id)
 
 		else
 			render 'new'
