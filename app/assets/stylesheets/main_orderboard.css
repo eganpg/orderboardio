@@ -1,0 +1,15 @@
+.distributor {
+	width: 100%;
+	margin-top: 5%;
+	height: 15%;
+}
+
+.background {
+	background: rgba(21,181,139,0.9);
+	height: 100%;
+}
+
+.btn {
+	border: solid;
+	border-color: black;
+}

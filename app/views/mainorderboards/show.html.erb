@@ -1,0 +1,14 @@
+<h1>Welcome to</h1>
+
+
+
+<%= @mainorderboard.name %><h1>s orderboard</h1>
+<%= @login.id %>
+
+<h2><%= link_to 'go to previous orders', login_mainorderboards_path(@login.id) %></h2>
+
+
+
+
+<h2><%= link_to 'Add New Vendor',  new_mainorderboard_suborder_path(@mainorderboard.id) %></h2>
+

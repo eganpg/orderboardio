@@ -1,0 +1,45 @@
+/*.footer_button {
+	width: 100%;
+	margin: 1px;
+color: red;
+}
+.header_wrapper {
+	
+}
+.header_button {
+	width:25%;
+	margin-top: 4%;
+}
+
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+
+.sub_header {
+	border: solid;
+	border-width: 1px;
+	background: white;
+	border-radius: 5px;
+}
+.sub_header_wrapper {
+	margin: 1% 0 0 0;
+}
+.title_logo {
+	font-size: 60px;
+	text-align: center;
+}
+.sub_item {
+	text-align: center;
+	background: white;
+	border-width: 1px;
+}
+.sub_product {
+	background: white;
+	margin: 0.5% 0px 0px 3px;
+}
+.background {
+	background: rgba(21,181,139,0.9);
+	color: black;
+}*/

@@ -1,0 +1,11 @@
+<h1>Login</h1>
+
+<%= form_for @login, {url: session_path} do |l| %>
+	
+	Username: <%= l.text_field :username %>
+	Password: <%= l.password_field :password, placeholder:"password...." %>
+	
+	Add: <%= l.submit "Log In" %>
+	<% end %>
+
+	<h1>Don't Have an account yet?</h1>	<%= link_to "Sign up", new_login_path %>

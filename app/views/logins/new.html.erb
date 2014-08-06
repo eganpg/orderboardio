@@ -1,0 +1,13 @@
+
+<h1>Sign up for our site</h1>
+
+<%= form_for @login do |l| %>
+	First Name: <%= l.text_field :firstName %>
+	Last Name: <%= l.text_field :lastName %>
+	Username: <%= l.text_field :username %>
+	Password: <%= l.password_field :password, placeholder:"password...." %>
+	Confirm Password: <%= l.password_field :password_confirmation, placeholder:"and again...." %>
+	Add: <%= l.submit "Add" %>
+	<% end %>
+
+	<%= link_to "Back to the List", logins_path %>

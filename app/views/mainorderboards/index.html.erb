@@ -1,0 +1,10 @@
+<h1>These are your past orders</h1>
+        	
+        	<ul>
+        	<% @mainorderboard.each do |l| %>
+          
+          <li><b><%= l.name %></b></li>
+        
+          <% end %>
+        </ul>
+          

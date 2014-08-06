@@ -1,0 +1,12 @@
+<h1>Login Page</h1>
+<% @login.each do |l| %>
+	<p><%= l.firstName %>
+	<%= l.lastName %>
+	<%= l.username %>
+	<%= l.password_digest %>
+</p>
+
+	<% end %>
+<%= link_to 'Show', logins_path %>
+<%= link_to 'New', new_login_path %>
+
