@@ -1,26 +1,10 @@
+<h1>This is a list of products on your order guide</h1>
 
-          </div><!-- /input-group -->
-        
-          <% @product.each do |l| %>
-          
-            <div class="sub_header col-md-6">
-              <div><h4>Product</h4></div>
-              <div class="sub_product col-md-6">
-              <div><%= l.name %></div>
-              </div>
-            </div>
-            <div class="sub_header col-md-2">
-              <div><h4>Price</h4></div>
-              <div class="sub_item col-md-2">
-              <div><%= l.description %></div>
-              </div>
-            </div>
-            <div class="sub_header col-md-2">
-              <div><h4>Cs/Brk</h4></div>
-              <div class="sub_item col-md-2">
-              <div><%= l.unit %></div>
-              </div>
-            </div>
-      
-          <% end %>
+<ul>
+  <% @products.each do |p| %>
+    <li><b><%= p.name %> </li>
+    <% end %>
+</ul>
+
+
          

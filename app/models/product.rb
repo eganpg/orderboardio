@@ -5,6 +5,7 @@ class Product
   field :description, type: String
   field :picture, type: String
   field :unit, type: String
-  belongs_to :productlist
   belongs_to :suborder
+  belongs_to :productlist
+  
 end

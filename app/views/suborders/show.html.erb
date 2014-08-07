@@ -1,7 +1,8 @@
 <h1>List the Vendors Here</h1>
-	<p><%= @suborder.vendorname %></p>
+	<%= @suborder.vendorname %>
+	<h2><%= link_to 'Add a Product to the Orderboard',   new_suborder_product_path(@suborder.id) %></h2>
+	
 
 
-          	
         
 	

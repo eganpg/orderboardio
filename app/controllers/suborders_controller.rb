@@ -1,14 +1,20 @@
 class SubordersController < ApplicationController
  
   def index
-    @suborders = Suborder.all
-    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
     
+    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+    @suborders = @mainorderboard.suborders
   end
 
   def show
-    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
-    @suborder = Suborder.new
+    
+   
+    @mainorderboard = Mainorderboard.find(params[:mainorderboard_id])
+    @suborder = Suborder.find(params[:id])
+    
+
+    
+    
   end
   
   def new

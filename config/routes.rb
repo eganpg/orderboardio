@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :mainorderboards do
     resources :suborders
   end
+  resources :suborders do
+    resources :products
+  end
+
  resource :session, only: [:new, :create, :destroy]
 
 

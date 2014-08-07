@@ -1,15 +1,16 @@
-<h1>This is where the suborder index will be</h1>
+<h1>This is where the vendor index for this day will be</h1>
 
 
 <ul>
-        	<% @suborders.each do |l| %>
+        	<% @suborders.each do |s| %>
           
-          <li><b><%= l.vendorname %></li>
+          <li><b><%= s.vendorname %> <%= link_to 'view orderboard', mainorderboard_suborder_path(@mainorderboard.id, s.id)%></li>
           	
         
           <% end %>
         </ul>
         
           	<%= link_to 'Add a Vendor', new_mainorderboard_suborder_path(@mainorderboard.id) %>
+
 
 

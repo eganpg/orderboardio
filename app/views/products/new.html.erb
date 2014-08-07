@@ -1,0 +1,10 @@
+<h1> Welp you got to the add a product page</h1>
+
+<h1>Time to add one</h1>
+
+<%= form_for [@suborder, @product] do |l| %>
+	Product: <%= l.text_field :name %>
+  
+	
+	Create a new product: <%= l.submit "Add" %>
+	<% end %>
