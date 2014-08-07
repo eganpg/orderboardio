@@ -1,11 +1,11 @@
 <h1>These are your past orders (Days)</h1>
         	
         	<ul>
-        	<% @mainorderboards.each do |l| %>
+        	<% @mainorderboards.each do |m| %>
           
-          <li><b><%= l.name %>
-          	<%= link_to ' do work on this', mainorderboard_suborders_path(@current_user.id)%></li>
-        
+          <li><b><%= m.name %>
+          	<%= link_to ' do work on this', mainorderboard_suborders_path(m.id)%></li>
           <% end %>
         </ul>
+        <h2><%= link_to 'Create a new orderboard', new_login_mainorderboard_path(@login.id) %></h2>
           

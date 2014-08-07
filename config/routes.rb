@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #resources :suborders
   
   
-  resources :products
+  
   
 
   
@@ -25,8 +25,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'logins' => 'logins#index'
-  get 'logins/new' => 'logins#new'
+  
 
 
   

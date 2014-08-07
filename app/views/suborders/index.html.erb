@@ -2,13 +2,14 @@
 
 
 <ul>
-        	<% @suborder.each do |l| %>
+        	<% @suborders.each do |l| %>
           
-          <li><b><%= l.vendorname %>
-          	<%= link_to ' do work on this', mainorderboard_suborders_path(@current_user.id)%></li>
+          <li><b><%= l.vendorname %></li>
+          	
         
           <% end %>
         </ul>
-        <%= link_to 'Add a Vendor', new_mainorderboard_suborder_path(@current_user.id) %>
+        
+          	<%= link_to 'Add a Vendor', new_mainorderboard_suborder_path(@mainorderboard.id) %>
 
 
