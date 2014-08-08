@@ -1,10 +1,7 @@
 // Place all the styles related to the logins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.body_wrapper {
-	background: rgba(21,181,139,0.70);
-	height: 680px;
-}
+
 
 .button {
 	width: 100%;
@@ -12,9 +9,27 @@
 	margin: 1%;
 
 }
+
+.body_wrapper {
+	background: rgba(21,181,139,0.7);
+	background-size: cover;
+	height: 690px;
+	width: 100%;
+	
+}
+
 .signupheader {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 6em;
+	color: white;
+	height: 100%;
 	text-align: center;
 	margin-top: 10%;
 	margin-bottom: 3%;
-	font-size: 6em;
+}
+
+.orderboardbutton {
+	text-align: center;
+	margin: 0.5%;
 }

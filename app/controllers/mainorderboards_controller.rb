@@ -18,12 +18,12 @@
 	end
 
 	def create
-		
-		@mainorderboards = current_user.mainorderboards.new(
+		@suborder = Suborder.new
+		@mainorderboard = current_user.mainorderboards.new(
 			params.require(:mainorderboard).permit(:name)
 			)
-		if @mainorderboards.save
-			redirect_to login_mainorderboards_path(@current_user.id)
+		if @mainorderboard.save
+			redirect_to mainorderboard_suborders_path(@mainorderboard.id)
 
 		else
 			render 'new'

@@ -1,6 +1,21 @@
-<h1>What day is this orderboard for</h1>
+
 <%= form_for [@current_user, @mainorderboard] do |l| %>
-	<%= l.text_field :name %>
-  
-	Add: <%= l.submit "Add" %>
-	<% end %>
+<div class="container-fluid body_wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="heading">set the date</h1>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-xs-12 orderboardbutton">
+  		<%= l.text_field :name, placeholder: 'xo/xo/xo', class: "btn btn-default btn-lg" %>
+  	</div>
+  </div>
+  <div class="row">
+  	<div class="col-xs-12 addboard">
+  		<%= l.submit "Add" %>
+  	</div>
+  </div>
+
+</div>	
+<% end %>

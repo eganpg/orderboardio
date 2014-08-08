@@ -1,3 +1,48 @@
 // Place all the styles related to the suborders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.addboard {
+	text-align: center;
+}
+
+.body_wrapper {
+	background: rgba(21,181,139,0.7);
+	background-size: cover;
+	height: 690px;
+	width: 100%;
+	
+}
+
+.heading {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 6em;
+	color: white;
+	height: 100%;
+	text-align: center;
+	margin-top: 18%;
+	margin-bottom: 3%;
+}
+
+.orderboardbutton {
+	text-align: center;
+	margin: 0.5%;
+}
+
+.newlink {
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	margin: 1%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+.order_guide {
+	margin-top: 1%;
+}
+
+.add_item {
+	margin-top: 1%;
+}

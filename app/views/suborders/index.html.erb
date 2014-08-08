@@ -1,17 +1,20 @@
-<h1>This is where the vendor index for this day will be</h1>
-
-
-<ul>
-        	<% @suborders.each do |s| %>
-          
-          <li><b><%= s.vendorname %> <%= link_to 'view orderboard', mainorderboard_suborder_path(@mainorderboard.id, s.id)%></li>
-          	
-        
-          <% end %>
-        </ul>
-        
-          	<%= link_to 'Add a Vendor', new_mainorderboard_suborder_path(@mainorderboard.id) %>
-          	
-
-
+<div class="container-fluid body_wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+			<h1 class="signupheader">vendor index</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3 pastorder">
+			<% @suborders.each do |s| %>
+			<%= link_to s.vendorname, mainorderboard_suborder_path(@mainorderboard, s.id), class: "btn btn-default btn-lg pastorder" %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 newlink">
+			<p class="newlink"><%= link_to 'add vendor',new_mainorderboard_suborder_path(@mainorderboard.id) %></p>
+		</div>
+	</div>
+</div>
 
