@@ -1,6 +1,6 @@
  class MainorderboardsController < ApplicationController
 	def index
-			
+		@login = Login.find(params[:login_id])	
 		@mainorderboards = current_user.mainorderboards
 	end
 
@@ -29,12 +29,6 @@
 			render 'new'
 		end
 	end
-	
-
-
-
-
-
 	def destroy
 		@mainorderboard = Mainorderboard.find(params[:id])
 		@mainorderboard.destroy
