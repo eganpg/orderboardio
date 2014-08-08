@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
 	end
 
 	def new
-
+		@mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
 		@suborder = Suborder.where(id: params[:suborder_id]).first
 		@product = Product.new
 	end

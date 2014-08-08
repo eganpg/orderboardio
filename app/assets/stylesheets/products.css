@@ -1,4 +1,4 @@
-/*.footer_button {
+.footer_button {
 	width: 100%;
 	margin: 1px;
 color: red;
@@ -42,4 +42,4 @@ color: red;
 .background {
 	background: rgba(21,181,139,0.9);
 	color: black;
-}*/
+}

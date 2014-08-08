@@ -1,6 +1,6 @@
  class MainorderboardsController < ApplicationController
 	def index
-		@login = Login.find(params[:login_id])
+			
 		@mainorderboards = current_user.mainorderboards
 	end
 

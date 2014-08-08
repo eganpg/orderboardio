@@ -1,3 +1,20 @@
 // Place all the styles related to the logins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.body_wrapper {
+	background: rgba(21,181,139,0.70);
+	height: 680px;
+}
+
+.button {
+	width: 100%;
+	text-align: center;
+	margin: 1%;
+
+}
+.signupheader {
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	font-size: 6em;
+}

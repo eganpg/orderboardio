@@ -1,13 +1,43 @@
 
-<h1>Sign up for our site</h1>
 
-<%= form_for @login do |l| %>
-	First Name: <%= l.text_field :firstName %>
-	Last Name: <%= l.text_field :lastName %>
-	Username: <%= l.text_field :username %>
-	Password: <%= l.password_field :password, placeholder:"password...." %>
-	Confirm Password: <%= l.password_field :password_confirmation, placeholder:"and again...." %>
-	Add: <%= l.submit "Add" %>
-	<% end %>
 
-	<%= link_to "Back to the List", logins_path %>
+	<div class="container-fluid body_wrapper">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="signupheader">make your day suck less</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-2">
+         
+          <%= l.text_field :firstName, class: "form-control button", placeholder: "first name"%>
+        </div>
+        <div class="col-xs-2">
+          <%= l.text_field :lastName, class: "form-control button", placeholder: "last name" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+          <%= l.text_field :username, class: "button form-control", placeholder: "pick your username" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+        	<%= l.password_field :password, class: "button form-control", placeholder:"pick a unique password" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+        	<%= l.password_field :password_confirmation, class: "button form-control", placeholder: "confirm your new password" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 button">
+        	<%= l.submit "button that works and I hate it" %>
+          <button type="button" class="btn button btn-default">submit here</button>
+        </div>
+      </div>
+    </div>
+    <% end %>
