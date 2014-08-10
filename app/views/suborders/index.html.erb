@@ -5,15 +5,18 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3 pastorder">
+		<div class="col-xs-6 col-xs-offset-4 pastorder">
 			<% @suborder.each do |s| %>
 			<%= link_to s.vendorname, suborder_products_path(s.id), class: "btn btn-default btn-lg pastorder" %>
 			<% end %>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 newlink">
-			<p class="newlink"><%= link_to 'add vendor',new_mainorderboard_suborder_path(@mainorderboard.id) %></p>
+		<div class="col-xs-6 pastorder">
+			<%= link_to 'push all orders', suborder_products_path(@mainorderboard.id), class: "btn btn-default pull-right btn-lg pastorder" %>
+		</div>
+		<div class="col-xs-5 pastorder">
+			<%= link_to 'add vendor',new_mainorderboard_suborder_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
 		</div>
 	</div>
 </div>
