@@ -12,7 +12,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # this is to link heroku
 gem 'rails_12factor'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 # gem mongoid

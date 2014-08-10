@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 	def index
+		@mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+		
 		
 		@suborder = Suborder.where(id: params[:suborder_id]).first	
 		@products = @suborder.products
@@ -20,7 +22,7 @@ class ProductsController < ApplicationController
 
 	def create
 		@suborder = Suborder.where(id: params[:suborder_id]).first
-		@product = @suborder.products.new(params.require(:product).permit(:name, :price, :description, :picture, :unit))
+		@product = @suborder.products.new(params.require(:product).permit(:name, :par, :onhand, :unit))
 		if @product.save
       redirect_to suborder_products_path(@suborder.id)
       else

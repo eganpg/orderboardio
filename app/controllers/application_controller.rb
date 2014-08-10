@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   	@current_user ||= Login.find(session[:login_id]) if session[:login_id]
   end
   # def current_mainorderboard
-  # 	@current_mainorderboard ||= Mainorderboard.find(session[:login_id]) if session[:login_id]
+  # 	@current_mainorderboard ||= Mainorderboard.find(session[:mainorderboard.id]) if session[:login_id]
   # end
 end

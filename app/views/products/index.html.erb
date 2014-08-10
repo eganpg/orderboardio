@@ -1,11 +1,103 @@
-<h1>This is a list of products on your order guide</h1>
+<div class="container-fluid body_wrapper" ng-controller="orderguide">
+      <div class="row">
+        <div class="order_guide  col-md-8" >
+          <div class="input-group">
+            <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <%= link_to 'Add a Product to the Orderboard',   new_suborder_product_path(@suborder.id), class: 'btn btn-default' %>
+              </span>
+          </div><!-- /input-group -->
+          
+          <div class="sub_header_wrapper">
+            <div class="sub_header col-xs-4">
+              <div><h4>Product</h4></div>
+              <% @products.each do |p| %>
+              <%= p.name %></br>
+              <% end %>
+             
+            </div>
+            <div class="sub_header col-xs-2">
+              <div><h4>Par</h4></div>
+              <div class="sub_item">
+              	<% @products.each do |p| %>
+              	<%= p.par %></br>
+              	<% end %>
+              </div>
+            </div>
+            <div class="sub_header col-xs-2">
+              <div><h4>OnHand</h4></div>
+              <div class="sub_item">
+              	<% @products.each do |p| %>
+              	<%= p.onhand %></br> 
+              	<% end %>
+              </div>
+            </div>
+            <div class="sub_header col-xs-2">
+              <div><h4>Unit</h4></div>
+              <div class="sub_item">
+              	<% @products.each do |p| %>
+              	<%= p.unit %></br>
+              	<% end %>
+              </div>
+            </div>
+            <div class="sub_header col-xs-2">
+              <div><h4>Add</h4>
+              </div>
+              <div class="sub_item col-xs-2">
+              <input ng-repeat="p in product" type="checkbox"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="add_item col-md-4">
+          <div class="input-group">
+            <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+          </div><!-- /input-group -->
+          <div class="sub_header_wrapper">
+            <div class="sub_header col-xs-4">
+              <div><h4>Product</h4></div>
+              <div class="sub_product col-md-4">
+              <div ng-repeat="p in product">{{p.name}}</div>
+              </div>
+            </div>
+            <div class="sub_header col-xs-3">
+              <div><h4>Price</h4></div>
+              <div class="sub_item col-md-3">
+              <div ng-repeat="p in product">{{p.price}}</div>
+              </div>
+            </div>
+            <div class="sub_header col-xs-3">
+              <div><h4>Cs/Brk</h4></div>
+              <div class="sub_item col-md-3">
+              <div ng-repeat="p in product">{{p.csbrk}}</div>
+              </div>
+            </div>
+            <div class="sub_header col-xs-2">
+              <div><h4>Add</h4></div>
+              <div class="sub_item col-xs-2">
+              <input ng-repeat="p in product" type="checkbox"></input>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom col-xs-12 bottom_nav" role="navigation">
+      <div class="container">
+       
+        <%= link_to "push to orderboard", :back, class: "btn btn-default navbar-btn col-xs-offset-5" %>
+       
+      </div>
+    </nav>
 
-<ul>
-  <% @products.each do |p| %>
-    <li><b><%= p.name %> </li>
-    <% end %>
-</ul>
 
-<h2><%= link_to 'Add a Product to the Orderboard',   new_suborder_product_path(@suborder.id) %></h2>
+
+
+
+
 
          

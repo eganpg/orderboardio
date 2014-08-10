@@ -3,7 +3,8 @@ class SubordersController < ApplicationController
   def index
     
     @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
-    @suborders = @mainorderboard.suborders
+    
+    @suborder = @mainorderboard.suborders
   end
 
   def show
