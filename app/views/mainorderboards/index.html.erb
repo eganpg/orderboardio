@@ -5,15 +5,15 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3 pastorder">
+		<div class="col-xs-12 newlink">
 			<% @mainorderboards.each do |m| %>
-			<%= link_to m.name, mainorderboard_suborders_path(m.id), class: "btn btn-default btn-lg pastorder" %>
+			<%= link_to m.name, mainorderboard_suborders_path(m.id), class: "btn btn-default btn-lg" %>
 			<% end %>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-12 newlink">
-			<p class="newlink"><%= link_to 'new orderboard',new_login_mainorderboard_path(@login.id) %></p>
+			<%= link_to 'new orderboard',new_login_mainorderboard_path(@login.id), class: "btn btn-default btn-lg newlink" %>
 		</div>
 	</div>
 </div>
