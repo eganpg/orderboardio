@@ -1,7 +1,7 @@
 <div class="container-fluid body_wrapper">
   <div class="row">
     <div class="col-xs-12">
-			<h1 class="heading">vendor index</h1>
+			<h1 class="heading"> admin vendor index</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -12,9 +12,14 @@
 		</div>
 	</div>
 	<div class="row">
+		<div class="col-xs-12 pastorder">		
+			
+			<%= link_to 'set up orderboard',new_mainorderboard_suborder_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-xs-12 pastorder">
 			<%= link_to 'push all orders', suborder_products_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
-			<%= link_to 'add vendor',new_mainorderboard_suborder_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
 		</div>
 	</div>
 </div>

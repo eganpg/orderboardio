@@ -1,14 +1,25 @@
-<h1>Welcome to</h1>
-
-
-
-<%= @mainorderboard.name %><h1>s orderboard</h1>
-<%= @login.id %>
-
-<h2><%= link_to 'go to previous orders', login_mainorderboards_path(@login.id) %></h2>
-
-
-
-
-<h2><%= link_to 'Add a Vendor Orderboard',  new_mainorderboard_suborder_path(@mainorderboard.id) %></h2>
-
+<div class="container-fluid body_wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+			<h1 class="heading"> admin vendor index</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 pastorder">
+			<% @suborder.each do |s| %>
+			<%= link_to s.vendorname, suborder_products_path(s.id), class: "btn btn-default btn-lg pastorder" %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 pastorder">		
+			
+			<%= link_to 'set up orderboard',new_mainorderboard_suborder_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 pastorder">
+			<%= link_to 'push all orders', suborder_products_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
+		</div>
+	</div>
+</div>

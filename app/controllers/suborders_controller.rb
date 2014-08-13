@@ -4,18 +4,13 @@ class SubordersController < ApplicationController
     
     @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
     
-    @suborder = @mainorderboard.suborders
+    @suborder = Suborder.all
   end
 
   def show
     
-   
-    @mainorderboard = Mainorderboard.find(params[:mainorderboard_id])
-    @suborder = Suborder.find(params[:id])
-    
-
-    
-    
+    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+    @suborder = @mainorderboard.suborders
   end
   
   def new
@@ -25,18 +20,21 @@ class SubordersController < ApplicationController
   end
 
   def create
+    
     @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
     @suborder = @mainorderboard.suborders.new(
       params.require(:suborder).permit(:vendorname, :email)
       )
     if @suborder.save
-      redirect_to mainorderboard_suborders_path(@mainorderboard.id)
-
-
-
+      redirect_to mainorderboard_suborder_path(@mainorderboard.id, @suborder.id)
     else
       render 'new'
     end
+  end
+
+  def add
+    @mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+    @suborder = @suborder.all
   end
 
   def edit

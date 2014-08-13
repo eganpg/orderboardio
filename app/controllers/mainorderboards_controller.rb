@@ -6,8 +6,8 @@
 
 	def show
 		
-		@login = Login.find(params[:login_id])
-		@mainorderboards = current_user.mainorderboards
+		@mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
+		
 	end
 
 	

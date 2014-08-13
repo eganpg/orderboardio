@@ -44,7 +44,9 @@
               <div><h4>Add</h4>
               </div>
               <div class="sub_item col-xs-2">
-              <input ng-repeat="p in product" type="checkbox"></input>
+              <% @products.each do |p| %>
+              <%= check_box_tag(:add) %>
+              <% end %>
               </div>
             </div>
           </div>

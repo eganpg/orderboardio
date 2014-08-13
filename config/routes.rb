@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
   
   
-  
+  get 'mainorderboards/:mainorderboard_id/suborders/add' => 'suborders#add'
 
   
 

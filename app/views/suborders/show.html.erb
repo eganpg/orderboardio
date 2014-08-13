@@ -1,90 +1,27 @@
-<%= link_to 'Back to main orderboard', mainorderboard_suborders_path(@mainorderboard.id) %>
-	<%= link_to 'Add a Product to the Orderboard',   new_suborder_product_path(@suborder.id) %>
-			
-		
-    <div class="container-fluid body_wrapper" ng-controller="orderguide">
-      <div class="row">
-        <div class="order_guide  col-md-8" >
-          <div class="input-group">
-            <input type="text" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
-          </div><!-- /input-group -->
-          <div class="sub_header_wrapper">
-            <div class="sub_header col-xs-4">
-              <div><h4>Product</h4></div>
-              <div ng-repeat="p in product">{{p.name}}</div>
-            </div>
-            <div class="sub_header col-xs-2">
-              <div><h4>Par</h4></div>
-              <div ng-repeat="p in product" class="sub_item">{{p.par}}</div>
-            </div>
-            <div class="sub_header col-xs-2">
-              <div><h4>OnHand</h4></div>
-              <div ng-repeat="p in product"class="sub_item">{{p.onhand}}</div>
-            </div>
-            <div class="sub_header col-xs-2">
-              <div><h4>Order</h4></div>
-              <div ng-repeat="p in product"class="sub_item">{{p.unit}}</div>
-            </div>
-            <div class="sub_header col-xs-2">
-              <div><h4>Add</h4>
-              </div>
-              <div class="sub_item col-xs-2">
-              <input ng-repeat="p in product" type="checkbox"></input>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="add_item col-md-4">
-          <div class="input-group">
-            <input type="text" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
-          </div><!-- /input-group -->
-          <div class="sub_header_wrapper">
-            <div class="sub_header col-xs-4">
-              <div><h4>Product</h4></div>
-              <div class="sub_product col-md-4">
-              <div ng-repeat="p in product">{{p.name}}</div>
-              </div>
-            </div>
-            <div class="sub_header col-xs-3">
-              <div><h4>Price</h4></div>
-              <div class="sub_item col-md-3">
-              <div ng-repeat="p in product">{{p.price}}</div>
-              </div>
-            </div>
-            <div class="sub_header col-xs-3">
-              <div><h4>Cs/Brk</h4></div>
-              <div class="sub_item col-md-3">
-              <div ng-repeat="p in product">{{p.csbrk}}</div>
-              </div>
-            </div>
-            <div class="sub_header col-xs-2">
-              <div><h4>Add</h4></div>
-              <div class="sub_item col-xs-2">
-              <input ng-repeat="p in product" type="checkbox"></input>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container-fluid body_wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="heading">user vendor index</h1>
     </div>
-    
-    <nav class="navbar navbar-default navbar-fixed-bottom col-xs-12" role="navigation">
-      <div class="container">
-        <button type="button" class="btn btn-default navbar-btn">delivery date</button>
-        <button type="button" class="btn btn-default navbar-btn">push to orderboard</button>
-      </div>
-    </nav>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 pastorder">
+      <% @suborder.each do |s| %>
+      <%= link_to s.vendorname, suborder_products_path(s.id), class: "btn btn-default btn-lg pastorder" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 pastorder">   
+      
+      <%= link_to 'set up orderboard',new_mainorderboard_suborder_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 pastorder">
+      <%= link_to 'push all orders', suborder_products_path(@mainorderboard.id), class: "btn btn-default btn-lg pastorder" %>
+    </div>
+  </div>
+</div>
 
 
-	
-	
-
-
-        
-	
