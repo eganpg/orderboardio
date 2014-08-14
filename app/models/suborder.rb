@@ -3,18 +3,15 @@ class Suborder
   field :vendorname, type: String
   field :email, type: String
   
-  belongs_to :mainorderboard
+ 
   
   
-  # embeds_many :suborder_products
-  # embeds_many :products
-  
-  # has_many :products
+ 
+  has_many :mainorderboard_suborders
   has_many :products
+  belongs_to :login
+  accepts_nested_attributes_for :mainorderboard_suborders
   
-
-  # accepts_nested_attributes_for :suborder_product
-
   # below is an example of what it is going to look like when we use active record.
   # has_many :products, through: :suborder_products
 

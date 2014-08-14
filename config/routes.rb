@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :logins do
     resources :mainorderboards
-  end 
-  resources :mainorderboards do
     resources :suborders
+    
   end
   resources :suborders do
     resources :products

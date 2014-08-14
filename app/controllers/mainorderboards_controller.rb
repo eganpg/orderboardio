@@ -12,18 +12,19 @@
 
 	
 	def new
-		@login = Login.find(params[:login_id])
+		@login = Login.where(id: params[:login_id]).first
 		@mainorderboard = Mainorderboard.new
 		
 	end
 
 	def create
-		@suborder = Suborder.new
-		@mainorderboard = current_user.mainorderboards.new(
-			params.require(:mainorderboard).permit(:name)
+		@login = Login.where(id: params[:login_id]).first
+		@mainorderboard = @login.mainorderboards.new(
+			params.require(:mainorderboard).permit(:name, suborder_ids: []) 
 			)
 		if @mainorderboard.save
-			redirect_to mainorderboard_suborders_path(@mainorderboard.id)
+			# redirect_to login_mainorderboard_path(@login.id, @mainorderboard.id)
+			redirect_to login_mainorderboards_path(@login.id)
 
 		else
 			render 'new'

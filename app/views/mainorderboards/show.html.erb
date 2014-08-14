@@ -6,7 +6,7 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 pastorder">
-			<% @suborder.each do |s| %>
+			<% @suborders.each do |s| %>
 			<%= link_to s.vendorname, suborder_products_path(s.id), class: "btn btn-default btn-lg pastorder" %>
 			<% end %>
 		</div>

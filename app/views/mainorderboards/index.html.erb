@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="col-xs-12 newlink">
 			<% @mainorderboards.each do |m| %>
-			<%= link_to m.name, mainorderboard_suborders_path(m.id), class: "btn btn-default btn-lg" %>
+			<%= link_to m.name, login_suborder_path(@login.id, m.id), class: "btn btn-default btn-lg new link" %>
 			<% end %>
 		</div>
 	</div>

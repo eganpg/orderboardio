@@ -11,4 +11,5 @@ class Login
   has_secure_password
 
   has_many :mainorderboards
+  has_many :suborders
 end
