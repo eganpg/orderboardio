@@ -2,6 +2,7 @@ class Suborder
   include Mongoid::Document
   field :vendorname, type: String
   field :email, type: String
+  field :itemname, type: String
   
  
   

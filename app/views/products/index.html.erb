@@ -53,10 +53,11 @@
         </div>
         <div class="add_item col-md-4">
           <div class="input-group">
-            <input type="text" class="form-control">
+           <input type="text" class="form-control">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
+                <%= link_to 'search',   new_suborder_product_path(@suborder.id), class: 'btn btn-default' %>
               </span>
+            
           </div><!-- /input-group -->
           <div class="sub_header_wrapper">
             <div class="sub_header col-xs-4">

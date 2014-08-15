@@ -8,17 +8,20 @@
 		<div class="col-xs-12 pastorder">
 			<% @suborder.each do |s| %>
 			<%= link_to s.vendorname, suborder_products_path(s.id), class: "btn btn-default btn-lg pastorder" %>
+			
 			<% end %>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-12 pastorder">		
 			<%= link_to 'set up orderboard', new_login_suborder_path(@login.id), class: "btn btn-default btn-lg pastorder" %>
+			<%= link_to 'delete an orderboard', edit_login_suborder_path(@login.id, @suborder), class: "btn btn-default btn-lg pastorder" %>
 		</div>
 	</div>
+	
 	<div class="row">
 		<div class="col-xs-12 pastorder">
-			<%= link_to 'push all orders', login_suborders_path(@login.id), class: "btn btn-default btn-lg pastorder" %>
+			<%= link_to 'go home', login_path(@login.id), class: "btn btn-default btn-lg pastorder" %>
 		</div>
 	</div>
 </div>
