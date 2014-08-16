@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 	def create
 		#find the user that is trying to login
 
-		u = Login.where(username: params[:login][:username]).first
+		u = Login.where(email: params[:login][:email]).first
 		# if they type the password correctly
 		if u && u.authenticate(params[:login][:password])
 			

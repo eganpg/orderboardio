@@ -1,20 +1,4 @@
-<% if @login.errors.any? %>
 
-      <div id="error_explanation">
-
-        <h2>
-          <%= pluralize(@login.errors.count, "error") %> prohibited this user from being saved:
-        </h2>
-
-        <ul class="list-group">
-
-        <% @login.errors.full_messages.each do |msg| %>
-          <li class="list-group-item list-group-item-danger"><%= msg %></li>
-        <% end %>
-
-        </ul>
-
-      </div>
 
 
 
@@ -44,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col-xs-4 col-xs-offset-4">
-          <%= l.text_field :username, class: "button form-control", placeholder: "enter your email" %>
+          <%= l.text_field :email, class: "button form-control", placeholder: "enter your email" %>
         </div>
       </div>
       <div class="row">
@@ -57,7 +41,6 @@
         	<%= l.password_field :password_confirmation, class: "button form-control", placeholder: "confirm your new password" %>
         </div>
       </div>
-
       <div class="row">
         <div class="col-xs-4 col-xs-offset-4 button">
         	<%= l.submit "submit here", class: "btn button btn-default btn-lg" %>
@@ -65,16 +48,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-4 col-xs-offset-4">
-          <ul class="list-group">
+        <div class="col-xs-4 col-xs-offset-4 button"> 
+            <% if @login.errors.any? %>
+            <div id="error_explanation">
 
-          <% @login.errors.full_messages.each do |msg| %>
-            <li class="list-group-item list-group-item-danger"><%= msg %></li>
-          <% end %>
 
-          </ul>
-        </div>
+        <ul class="list-group">
+
+        <% @login.errors.full_messages.each do |msg| %>
+          <li class="list-group-item list-group-item-danger"><%= msg %></li>
+        <% end %>
+
+        </ul>
+
       </div>
+
+<% end %>
+</div>
+</div>
     </div>
-    <% end %>
     <% end %>

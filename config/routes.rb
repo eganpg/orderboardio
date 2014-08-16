@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
   resources :logins do
     resources :mainorderboards
     resources :suborders
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
 
  resource :session, only: [:new, :create, :destroy]
 
-
+ resources :password_resets
 
   #resources :suborders
   
