@@ -6,14 +6,11 @@
   </div>
   <div class="row">
     <div class="col-xs-12 orderboardbutton">
-       <p><%= link_to 'start a new orderboard(vendor)', new_login_mainorderboard_path(@login.id), class: "btn btn-default btn-lg" %></p>
+       <p><%= link_to 'new orderboard', new_login_mainorderboard_path(@login.id), class: "btn btn-default btn-lg" %>
+       <%= link_to 'in progess', login_mainorderboards_path(@login.id), class: "btn btn-default btn-lg" %></p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12 orderboardbutton">
-       <p><%= link_to 'work on an existing board', login_mainorderboards_path(@login.id), class: "btn btn-default btn-lg" %></p>
-    </div>
-  </div>
+  
   <div class="row">
     <div class="col-xs-12 orderboardbutton">
        <p><%= link_to 'add/remove vendors', login_suborders_path(@login.id), class: "btn btn-default btn-lg" %></p>
