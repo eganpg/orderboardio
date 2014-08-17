@@ -16,7 +16,7 @@
               <% end %>
              
             </div>
-            <div class="sub_header col-xs-2">
+            <div class="sub_header col-xs-1">
               <div><h4>Par</h4></div>
               <div class="sub_item">
               	<% @products.each do |p| %>
@@ -24,22 +24,23 @@
               	<% end %>
               </div>
             </div>
-            <div class="sub_header col-xs-2">
+            <div class="sub_header col-xs-1">
+              <div><h4>Unit</h4></div>
+              <div class="sub_item">
+                <% @products.each do |p| %>
+                <%= p.unit %></br>
+                <% end %>
+              </div>
+            </div>
+            <div class="sub_header col-xs-4">
               <div><h4>OnHand</h4></div>
               <div class="sub_item">
               	<% @products.each do |p| %>
-              	<%= p.onhand %></br> 
+              	<%= number_field :onhand, placeholder: "onhand" %>
               	<% end %>
               </div>
             </div>
-            <div class="sub_header col-xs-2">
-              <div><h4>Unit</h4></div>
-              <div class="sub_item">
-              	<% @products.each do |p| %>
-              	<%= p.unit %></br>
-              	<% end %>
-              </div>
-            </div>
+            
             <div class="sub_header col-xs-2">
               <div><h4>Add</h4>
               </div>

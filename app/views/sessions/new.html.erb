@@ -30,9 +30,18 @@
      <p><%= link_to "forgotten password", new_password_reset_path %></p>
    </div>
  </div>
+<% end %>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4 button"> 
+      <% if @login.errors.any? %>
+      <div id="error_explanation">
+        <ul class="list-group">
+        <% @login.errors.full_messages.each do |msg| %>
+          <li class="list-group-item list-group-item-danger"><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
 
-
-
-      <% end %>
+<% end %>
 
 
