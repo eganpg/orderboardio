@@ -1,8 +1,13 @@
 class SessionsController < ApplicationController
 	
 	def new
-		@login = Login.new
-		@is_login = true
+		if current_user
+			reset_session
+			redirect_to new_session_path
+		else
+			@login = Login.new
+			@is_login = true
+		end
 	end
 
 	def create
