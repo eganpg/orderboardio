@@ -28,7 +28,7 @@ class SubordersController < ApplicationController
       params.require(:suborder).permit(:vendorname, :email)
       )
     if @suborder.save
-      redirect_to login_suborders_path(@login.id)
+      redirect_to login_suborder_path(@login.id, @suborder.id)
     else
       render 'new'
     end
