@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 	def index
+		@login = Login.where(id: params[:login_id])
 		@mainorderboard = Mainorderboard.where(id: params[:mainorderboard_id]).first
 		@suborder = Suborder.where(id: params[:suborder_id]).first	
 		@products = @suborder.products
